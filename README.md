@@ -19,7 +19,9 @@ Ulr application `http://localhost:3000`
 ## Setup
 
 Node version: *18.13.0*
-Connection with the back end, you can find the back end in the `https://github.com/VitorTenor/schoolApplicationReactWeb`
+
+Necessary connection with the back end, you can find the back end in the `https://github.com/VitorTenor/schoolApplicationReactWeb`
+
 Run the comand `npm i` to install the dependencies
 
 For start the application in dev environment you have to execute that comand `npm run dev`.
