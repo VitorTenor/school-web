@@ -4,9 +4,10 @@ import { isEmail, isInt, isFloat } from 'validator';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import { FaUserCircle, FaEdit } from 'react-icons/fa';
+import { FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import { Avatar } from '@bigheads/core';
 import axios from '../../services/axios';
 import { Container } from '../../styles/GlobalStyles';
 import { Form, ProfilePicture, Title } from './styled';
@@ -145,7 +146,7 @@ export default function Aluno({ match, history }) {
 
       {id && (
         <ProfilePicture>
-          {foto ? <img src={foto} alt={nome} /> : <FaUserCircle size={180} />}
+          {foto ? <img src={foto} alt={nome} /> : <Avatar />}
           <Link to={`/fotos/${id}`}>
             <FaEdit size={24} />
           </Link>

@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import { get } from 'lodash';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import {
-  FaUserCircle,
-  FaEdit,
-  FaWindowClose,
-  FaExclamation,
-} from 'react-icons/fa';
+import { FaEdit, FaWindowClose, FaExclamation } from 'react-icons/fa';
 
 import { toast } from 'react-toastify';
+import { Avatar } from '@bigheads/core';
 import { Container } from '../../styles/GlobalStyles';
 import axios from '../../services/axios';
 import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
@@ -71,7 +67,7 @@ export default function Alunos() {
               {get(aluno, 'fotos[0].url', '') ? (
                 <img src={aluno.fotos[0].url} alt="" />
               ) : (
-                <FaUserCircle size={36} />
+                <Avatar />
               )}
             </ProfilePicture>
 
